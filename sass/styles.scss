@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+{}
+{]}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 40px;
+}
+
+]][]
+
+.logo {
+    border: 2px solid black;
+    padding: 3px 8px;
+    font-size: 14px;
+}
+
+.navlinks a {
+    text-decoration: none;
+    color: black;
+    margin-left: 18px;
+    font-size: 13px;
+}
+
+.bigimage {
+    width: 88%;
+    height: 230px;
+    margin-left: 55px;
+    margin-top: 35px;
+    background-image: url("../images/tours-header.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+{]}
+
+.bigimage h1 {
+    position: absolute;
+    top: 85px;
+    left: 44%;
+    color: white;
+    font-size: 47px;
+}
+
+.stuff {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 80px;
+    margin-top: 60px;
+}
+
+.card {
+    width: 280px;
+    height: 330px;
+    margin-right: 45px;
+    margin-bottom: 55px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding-top: 95px;
+}
+
+.card h2 {
+    font-size: 22px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card a {
+    background: #6bb6ff;
+    padding: 7px 14px;
+    text-decoration: none;
+    color: white;
+    border-radius: 18px;
+    display: inline-block;
+    margin-top: 22px;
+    font-size: 12px;
+}
+
+
+.one { background-image: url("../images/tour-01\ \(1\).jpg"); }
+.two { background-image: url("../images/tour-02\ \(1\).jpg"); }
+.three { background-image: url("../images/tour-03\ \(1\).jpg"); }
+.four { background-image: url("../images/tour-04.jpg"); }
+.five { background-image: url("../images/tour-05.jpg"); }
+.six { background-image: url("../images/tour-06.jpg"); }
+.seven { background-image: url("../images/tour-07.jpg"); }
+.eight { background-image: url("../images/tour-08.jpg"); }
+.nine { background-image: url("../images/tour-09.jpg"); }
+
+.bottom {
+    background: #7ea8c9;
+    padding: 28px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media(max-width: 900px) {
+    .card { width: 240px; margin-right: 25px; }
+}
+
+@media(max-width: 600px) {
+    .stuff { flex-direction: column; margin-left: 35px; }
+    .card { width: 92%; height: 290px; }
+    .bigimage h1 { font-size: 29px; left: 36%; }
+}
+
+}}}
+{}{}
