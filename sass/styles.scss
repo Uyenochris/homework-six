@@ -1,119 +1,517 @@
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #f4f4f4;
+$blue: #79a6cc;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-{}
-{]}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f2f2f2;
+}
 
-.topnav {
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+
+.header {
+  padding: 30px 0 10px;
+
+  .nav {
     display: flex;
     justify-content: space-between;
-    padding: 18px 40px;
-}
+    align-items: center;
+  }
 
-]][]
 
-.logo {
-    border: 2px solid black;
-    padding: 3px 8px;
-    font-size: 14px;
-}
 
-.navlinks a {
+  nav a {
     text-decoration: none;
-    color: black;
-    margin-left: 18px;
-    font-size: 13px;
+    color: #333;
+    margin: 0 16px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+
+  nav a:not(:last-child)::after {
+    content: "|";
+    margin-left: 14px;
+    color: $blue;
+  }
+
+  .divider {
+    height: 2px;
+    background: #000;
+    width: 1100px;
+    margin: 20px auto 0;
+  }
 }
 
-.bigimage {
-    width: 88%;
-    height: 230px;
-    margin-left: 55px;
-    margin-top: 35px;
-    background-image: url("../images/tours-header.jpg");
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
 
-{]}
+.hero {
+  width: 1100px;
+  height: 260px;
+  margin: 50px auto 70px;
+  position: relative;
+  background: url('../images/tours-header.jpg') center/cover no-repeat;
 
-.bigimage h1 {
+  &::after {
+    content: "";
     position: absolute;
-    top: 85px;
-    left: 44%;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    font-size: 47px;
+    font-size: 64px;
+    letter-spacing: 10px;
+    font-style: italic;
+    z-index: 2;
+  }
 }
 
-.stuff {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 80px;
-    margin-top: 60px;
+
+.grid {
+  width: 900px; 
+  margin: 0 auto 140px; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 60px;
 }
 
 .card {
-    width: 280px;
-    height: 330px;
-    margin-right: 45px;
-    margin-bottom: 55px;
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding-top: 95px;
+  height: 420px; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+  }
 }
 
-.card h2 {
-    font-size: 22px;
-}
+.israel { background-image: url('../images/tour-01\ \(1\).jpg'); }
+.usa { background-image: url('../images/tour-02 (1).jpg'); }
+.australia { background-image: url('../images/tour-03 (1).jpg'); }
+.nz { background-image: url('../images/tour-04.jpg'); }
+.france { background-image: url('../images/tour-05.jpg'); }
+.egypt { background-image: url('../images/tour-06.jpg'); }
+.japan { background-image: url('../images/tour-07.jpg'); }
+.canada { background-image: url('../images/tour-08.jpg'); }
+.uae { background-image: url('../images/usa.jpg'); }
 
-.card p {
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  z-index: 2;
+
+  h2 {
+    font-size: 32px;
+    letter-spacing: 3px;
+    font-style: italic;
+  }
+
+  p {
+    margin: 12px 0 20px;
     font-size: 14px;
+    letter-spacing: 2px;
+  }
 }
 
-.card a {
-    background: #6bb6ff;
-    padding: 7px 14px;
+button {
+  background: $blue;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  border-radius: 40px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.footer {
+  background: $blue;
+  padding: 50px 0;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  .icons span {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container,
+  .hero,
+  .divider {
+    width: 90%;
+  }
+
+  .grid {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+$blue: #79a6cc;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #f2f2f2;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+
+.header {
+  padding: 30px 0 10px;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+
+  nav a {
     text-decoration: none;
+    color: #333;
+    margin: 0 16px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+
+  nav a:not(:last-child)::after {
+    content: "|";
+    margin-left: 14px;
+    color: $blue;
+  }
+
+  .divider {
+    height: 2px;
+    background: #000;
+    width: 1100px;
+    margin: 20px auto 0;
+  }
+}
+
+
+.tour-hero {
+  width: 1100px;
+  height: 300px;
+  margin: 40px auto 50px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  im
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+  }
+
+  h1 {
+    position: absolute;
+    left: 40px;
+    top: 70px;
     color: white;
-    border-radius: 18px;
-    display: inline-block;
-    margin-top: 22px;
+    font-size: 44px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    z-index: 2;
+  }
+
+  .price {
+    position: absolute;
+    right: 40px;
+    bottom: 15px;
+    color: white;
     font-size: 12px;
+    letter-spacing: 1px;
+    z-index: 2;
+  }
+}
+
+.usa-hero {
+  background: url('../images/tour-02.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
 }
 
 
-.one { background-image: url("../images/tour-01\ \(1\).jpg"); }
-.two { background-image: url("../images/tour-02\ \(1\).jpg"); }
-.three { background-image: url("../images/tour-03\ \(1\).jpg"); }
-.four { background-image: url("../images/tour-04.jpg"); }
-.five { background-image: url("../images/tour-05.jpg"); }
-.six { background-image: url("../images/tour-06.jpg"); }
-.seven { background-image: url("../images/tour-07.jpg"); }
-.eight { background-image: url("../images/tour-08.jpg"); }
-.nine { background-image: url("../images/tour-09.jpg"); }
+.japan-hero {
+  background: url('../images/tour-07.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
 
-.bottom {
-    background: #7ea8c9;
-    padding: 28px;
+
+.australia-hero{
+  background: url('../images/tour-03 (1).jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+
+
+
+
+
+.uae-hero {
+  background: url('../images/usa.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+
+.france-hero {
+  background: url('../images/tour-05.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+.egypt-hero {
+  background: url('../images/tour-06.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+.japan-hero {
+  background: url('../images/tour-07.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+
+
+
+
+
+.newzealand-hero {
+  background: url('../images/tour-04.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+.canada-hero {
+  background: url('../images/tour-08.jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+
+
+
+
+
+
+
+.israel-hero {
+  background: url('../images/tour-01 (1).jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+
+
+
+.usa-hero {
+  background: url('../images/tour-02 (1).jpg') center/cover no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);}
+}
+
+
+
+
+
+.tour-images {
+  display: flex;
+  gap: 40px;
+  margin: 40px auto 60px;
+
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
+
+
+.tour-content {
+  margin-bottom: 140px;
+
+  .day {
+    margin-bottom: 70px;
+
+    h2 {
+      font-size: 26px;
+      letter-spacing: 4px;
+      font-weight: 300;
+    }
+
+    .line {
+      width: 60px;
+      height: 2px;
+      background: #000;
+      margin: 10px 0 20px;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: 12px;
+      line-height: 1.8;
+      color: #333;
+    }
+  }
+
+  .center {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
+  }
 }
 
-@media(max-width: 900px) {
-    .card { width: 240px; margin-right: 25px; }
+
+
+button {
+  background: $blue;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  border-radius: 40px;
+  font-size: 12px;
+  cursor: pointer;
 }
 
-@media(max-width: 600px) {
-    .stuff { flex-direction: column; margin-left: 35px; }
-    .card { width: 92%; height: 290px; }
-    .bigimage h1 { font-size: 29px; left: 36%; }
+
+.footer {
+  background: $blue;
+  padding: 50px 0;
 }
 
-}}}
-{}{}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+
+  .icons span {
+    margin-left: 20px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .container,
+  .tour-hero,
+  .divider {
+    width: 90%;
+  }
+
+  .tour-images {
+    flex-direction: column;
+
+    img {
+      height: 220px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+}
